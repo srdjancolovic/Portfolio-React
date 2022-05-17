@@ -1,4 +1,3 @@
-// import classes from '../../pages/Contact/Contact.module.scss';
 import classes from './Input.module.scss';
 const Input = ({
   text,
