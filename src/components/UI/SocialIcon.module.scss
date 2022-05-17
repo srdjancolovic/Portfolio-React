@@ -1,0 +1,27 @@
+@import './general.module.scss';
+
+.social-icon {
+  font-size: 25px;
+  position: relative;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  color: $white;
+  @include mq('to', 576) {
+    font-size: 22px;
+  }
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.2);
+
+      &:nth-child(1) {
+        color: $fbColor;
+      }
+      &:nth-child(2) {
+        color: $instaColor;
+      }
+      &:nth-child(3) {
+        color: $linkedInColor;
+      }
+    }
+  }
+}

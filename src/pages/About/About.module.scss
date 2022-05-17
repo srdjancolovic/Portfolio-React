@@ -1,0 +1,96 @@
+@import '../../components/UI/general.module.scss';
+
+.about {
+  display: flex;
+  align-items: center;
+
+  @include mq('to', 1200) {
+    flex-direction: column;
+  }
+
+  //Text side
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-right: 65px;
+
+    @include mq('to', 1200) {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    p {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  //Experience
+  &__experience {
+    p {
+      width: fit-content;
+      margin-top: 30px;
+      margin-bottom: 15px !important;
+
+      &:last-child {
+        margin-top: 0 !important;
+        margin-bottom: 30px !important;
+      }
+    }
+  }
+
+  //Buttons
+  &__buttons {
+    display: flex;
+
+    @include mq('to', 1200) {
+      justify-content: center;
+    }
+
+    @include mq('to', 576) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__projects-cta {
+    cursor: pointer;
+
+    &:last-child {
+      margin-left: 50px;
+
+      @include mq('to', 576) {
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  //Profile image
+  &__img {
+    position: relative;
+    width: 50% !important;
+    &::after {
+      position: absolute;
+      width: 100%;
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 50px;
+    }
+    @include mq('to', 1200) {
+      display: none;
+    }
+
+    img {
+      border-radius: 50px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

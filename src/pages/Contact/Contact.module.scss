@@ -1,0 +1,132 @@
+@import '../../components/UI/general.module.scss';
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 100px;
+
+  @include mq('to', 1200) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  //Info and icons wrapper
+  &__info-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  //Social icons
+  &__icons {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  //Phone and email wraper
+  &__info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    @include mq('to', 767) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  //General style for email and phone
+  &__info-item {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      margin-right: 60px;
+      @include mq('to', 767) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 18px;
+      @include mq('to', 576) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  //Phone and email icon
+  &__info-item-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    color: $white;
+  }
+
+  &__logo {
+    margin-top: 50px;
+    width: 100px;
+  }
+
+  &__logo--top {
+    @include mq('to', 1200) {
+      display: none;
+    }
+  }
+  &__logo--bottom {
+    display: none;
+    @include mq('to', 1200) {
+      display: block;
+    }
+  }
+
+  //FORM
+  &__form {
+    margin-top: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    max-width: 400px;
+    position: relative;
+    @include mq('to', 767) {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 70px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      //*Dodati za disabled classove i dinamicno to radtii dolje u htmlu
+      button {
+        margin-top: 30px;
+        @extend .btn;
+        &:not(:disabled) {
+          border-color: $notDisabledBtnColor;
+          color: $notDisabledBtnColor;
+
+          &:hover {
+            color: $white;
+            border-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__hint-msg {
+    position: absolute;
+    bottom: 57px;
+    z-index: 1000;
+    font-size: 18px;
+    color: $notDisabledBtnColor;
+    &--error {
+      @extend .contact__hint-msg;
+      color: $disabledColor;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import './components/UI/general.module.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  -webkit-tap-highlight-color: transparent;
+}
+
+h2 {
+  color: $white;
+  font-size: 55px;
+  letter-spacing: 1px;
+
+  @include mq('to', 767) {
+    font-size: 33px;
+  }
+}
+
+h5 {
+  color: $white;
+  font-size: 28px;
+
+  @include mq('to', 767) {
+    font-size: 22px;
+  }
+}
+
+p {
+  color: $white;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: lighter;
+
+  @include mq('to', 767) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,57 @@
+@import '../UI/general.module.scss';
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 5%;
+  right: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  grid-template-rows: repeat(3, 10px);
+  gap: 3px;
+  background: black !important;
+  width: 33px;
+  height: 33px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  transform: translateX(5px);
+  cursor: pointer;
+  @include mq('to', 576) {
+    gap: 2px;
+  }
+
+  &:focus {
+    outline: none;
+    background: none;
+    border: none;
+  }
+  @media (hover: hover) {
+    &:hover {
+      span {
+        background-color: $primary;
+      }
+    }
+  }
+
+  //Hamburger dots
+  span {
+    width: 5px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: $white;
+    transition: all 0.4s ease;
+    @include mq('to', 576) {
+      width: 4px;
+      height: 4px;
+    }
+  }
+
+  //Remove even dots when navigation is shown
+
+  &__remove-dot {
+    &:nth-child(even) {
+      opacity: 0;
+    }
+  }
+}

@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Fragment } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import './App.scss';
+import Contact from './pages/Contact/Contact';
+import Hamburger from './components/Hamburger/Hamburger';
+import Navigation from './components/Navigation/Navigation';
+import About from './pages/About/About';
+import Landing from './pages/Landing/Landing';
+import Projects from './pages/Projects/Projects';
+import Copyright from './components/UI/Copyright';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Hamburger />
+      <Navigation />
+      <Switch>
+        <Route path="/" exact>
+          <Landing />
+          <About />
+          <Contact />
+        </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
+      </Switch>
+      <Copyright />
+    </Fragment>
   );
 }
 

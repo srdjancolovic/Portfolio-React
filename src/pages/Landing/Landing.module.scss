@@ -1,0 +1,123 @@
+@import '../../components/UI/general.module.scss';
+
+.main {
+  background-image: url('../../assets/bg-img.webp');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  //svg
+  // path {
+  //   stroke-width: 2px;
+  //   stroke: red;
+  //   transition: all 0.5s;
+  //   animation: animate 3s linear forwards;
+
+  //   &:nth-child(1) {
+  //     stroke-dasharray: 545;
+  //     stroke-dashoffset: 545;
+  //   }
+  //   &:nth-child(2) {
+  //     stroke-dasharray: 449;
+  //     stroke-dashoffset: 449;
+  //   }
+  // }
+  // @keyframes animate {
+  //   80% {
+  //     stroke-dashoffset: 0;
+  //     fill: transparent;
+  //   }
+
+  //   100% {
+  //     fill: red;
+  //     stroke-dashoffset: 0;
+  //   }
+  // }
+
+  //Logo
+  &__logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 60px;
+
+    @include mq('to', 576) {
+      width: 45px;
+    }
+  }
+
+  //Headings
+  &__heading {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $white;
+
+    @include mq('to', 1400) {
+      top: 93%;
+      transform: translateY(-93%);
+    }
+
+    h1,
+    h3,
+    h4 {
+      font-weight: 450;
+    }
+
+    h1 {
+      font-size: 55px;
+      font-family: 'Kaushan Script';
+
+      @include mq('to', 1400) {
+        font-size: 47px;
+      }
+
+      @include mq('to', 576) {
+        font-size: 33px;
+      }
+    }
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: $white  !important;
+
+      @include mq('to', 1400) {
+        font-size: 37px;
+      }
+
+      @include mq('to', 576) {
+        font-size: 22px;
+      }
+    }
+
+    h4 {
+      font-size: 25px;
+
+      @include mq('to', 1400) {
+        font-size: 20px;
+      }
+
+      @include mq('to', 576) {
+        font-size: 17px;
+      }
+    }
+  }
+
+  //Social icons
+  &__social-icons {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    gap: 40px;
+
+    @include mq('to', 576) {
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+}
