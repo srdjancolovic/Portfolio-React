@@ -159,7 +159,7 @@ const Contact = () => {
             className={` ${nameInputClasses} ${nameInputClassesSuccess}`}
             type="text"
             placeholder={
-              nameInputIsInvalid ? 'Please enter your full name' : 'Your name'
+              nameInputIsInvalid ? 'Please enter your full name!' : 'Your name'
             }
             name="name"
             onChange={nameInputHandler}
@@ -170,7 +170,7 @@ const Contact = () => {
             className={`${emailInputClasses} ${emailInputClassesSuccess}`}
             type="email"
             placeholder={
-              emailInputIsInvalid ? 'Please enter your email' : 'Your email'
+              emailInputIsInvalid ? 'Please enter your email!' : 'Your email'
             }
             name="email"
             onChange={emailInputHandler}

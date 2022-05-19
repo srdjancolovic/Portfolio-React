@@ -5,10 +5,10 @@ const Copyright = () => {
   return (
     <div className={`${classes.copyright} ${classes.container}`}>
       <p>
-        &#169;2022.{' '}
+        &#169;2022.
         <span>
           <SiReact />
-        </span>{' '}
+        </span>
         Portfolio Website
       </p>
       <p>Website by Srdjan Colovic</p>
