@@ -56,11 +56,14 @@
 
   &__projects-cta {
     cursor: pointer;
+    @include mq('to', 767) {
+      min-width: 218px;
+    }
 
     &:last-child {
       margin-left: 50px;
 
-      @include mq('to', 576) {
+      @include mq('to', 767) {
         margin-top: 30px;
         margin-left: 0;
       }
@@ -80,14 +83,14 @@
       bottom: 0;
       right: 0;
       background: rgba(0, 0, 0, 0.15);
-      border-radius: 50px;
+      border-radius: 10px;
     }
     @include mq('to', 1200) {
       display: none;
     }
 
     img {
-      border-radius: 50px;
+      border-radius: 10px;
       width: 100%;
       height: 100%;
       object-fit: cover;

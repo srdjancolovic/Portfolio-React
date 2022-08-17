@@ -11,6 +11,8 @@ import { ImLinkedin2 } from 'react-icons/im';
 import { BsPhone } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 import { useRef, useState } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 import useInput from '../../hooks/use-input';
 import Input from '../../components/Input/Input';
@@ -147,11 +149,12 @@ const Contact = () => {
             <p>colovicsrdjan@yahoo.com</p>
           </div>
         </div>
+        <Link smooth to='/#landing'>
         <img
           src={logo}
           alt="Logo"
           className={`${classes.contact__logo} ${classes['contact__logo--top']}`}
-        />
+        /></Link>
       </div>
       <div className={classes.contact__form}>
         <form ref={form} onSubmit={sendEmailHandler}>
@@ -210,11 +213,12 @@ const Contact = () => {
             </p>
           )}
         </form>
+        <Link smooth to='/#landing'>
         <img
           src={logo}
           alt="Logo"
           className={`${classes.contact__logo} ${classes['contact__logo--bottom']}`}
-        />
+        /></Link>
       </div>
     </section>
   );

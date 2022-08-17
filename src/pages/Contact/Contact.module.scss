@@ -9,6 +9,9 @@
     flex-direction: column;
     align-items: center;
   }
+  @include mq('to', 767) {
+    padding-bottom: 40px;
+  }
 
   //Info and icons wrapper
   &__info-icons {
@@ -30,6 +33,7 @@
     margin-top: 30px;
     display: flex;
     align-items: center;
+
     @include mq('to', 767) {
       flex-direction: column;
       align-items: flex-start;
@@ -40,17 +44,21 @@
   &__info-item {
     display: flex;
     align-items: center;
+
     &:first-child {
       margin-right: 60px;
+
       @include mq('to', 767) {
         margin-right: 0;
         margin-bottom: 20px;
       }
     }
+
     a {
       color: $white;
       text-decoration: none;
       font-size: 18px;
+
       @include mq('to', 576) {
         font-size: 16px;
       }
@@ -67,6 +75,9 @@
   &__logo {
     margin-top: 50px;
     width: 100px;
+    @include mq('to', 767) {
+      width: 60px;
+    }
   }
 
   &__logo--top {
@@ -74,8 +85,10 @@
       display: none;
     }
   }
+
   &__logo--bottom {
     display: none;
+
     @include mq('to', 1200) {
       display: block;
     }
@@ -90,11 +103,13 @@
     width: 400px;
     max-width: 400px;
     position: relative;
+
     @include mq('to', 767) {
       width: 100%;
       max-width: 100%;
       margin-top: 70px;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -105,6 +120,10 @@
       button {
         margin-top: 30px;
         @extend .btn;
+        @include mq('to', 767) {
+          min-width: 218px;
+        }
+
         &:not(:disabled) {
           border-color: $notDisabledBtnColor;
           color: $notDisabledBtnColor;
@@ -123,7 +142,12 @@
     bottom: 57px;
     z-index: 1000;
     font-size: 18px;
-    color: $notDisabledBtnColor;
+    color: white;
+
+    @include mq('to', 1200) {
+      bottom: 215px;
+    }
+
     &--error {
       @extend .contact__hint-msg;
       color: $disabledColor;

@@ -27,9 +27,9 @@ const Landing = () => {
         />
       </svg>
       <div className={classes.main__heading}>
-        <h4>Hello, I'm</h4>
+        <span>Hello, I'm</span>
         <h1>Srdjan Colovic</h1>
-        <h3>Frontend Developer</h3>
+        <h2>Frontend Developer</h2>
         <Link smooth to="/#about" className={classes.btn}>
           About me
         </Link>

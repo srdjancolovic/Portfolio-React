@@ -2,14 +2,14 @@
 
 .hamburger {
   position: fixed;
-  z-index: 100;
+  z-index: 105;
   top: 5%;
   right: 5%;
   display: grid;
   grid-template-columns: repeat(3, 10px);
   grid-template-rows: repeat(3, 10px);
   gap: 3px;
-  background: black !important;
+  background: none !important;
   width: 33px;
   height: 33px;
   border-radius: 4px;
@@ -17,6 +17,7 @@
   border: none;
   transform: translateX(5px);
   cursor: pointer;
+
   @include mq('to', 576) {
     gap: 2px;
   }
@@ -26,6 +27,7 @@
     background: none;
     border: none;
   }
+
   @media (hover: hover) {
     &:hover {
       span {
@@ -41,6 +43,7 @@
     border-radius: 20px;
     background-color: $white;
     transition: all 0.4s ease;
+
     @include mq('to', 576) {
       width: 4px;
       height: 4px;

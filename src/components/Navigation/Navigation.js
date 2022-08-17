@@ -7,6 +7,7 @@ import { navActions } from '../../store/navActions';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { Fragment } from 'react';
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,9 @@ const Navigation = () => {
   };
 
   return (
-    <div
+    <Fragment>
+      <div className={navShown ? classes['navigation__overlay'] : classes['navigation__overlay-hide']} onClick={hideNavigationHandler}></div>
+      <div
       className={!navShown ? classes.navigation : classes['navigation-open']}
     >
       <Link
@@ -52,6 +55,7 @@ const Navigation = () => {
         <BiMessageDetail />
       </Link>
     </div>
+    </Fragment>
   );
 };
 

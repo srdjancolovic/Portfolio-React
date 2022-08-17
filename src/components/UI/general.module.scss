@@ -9,7 +9,8 @@ $disabledColor: rgb(196, 187, 187);
 $notDisabledBtnColor: rgb(91, 158, 91);
 $errorColor: rgb(150, 43, 43);
 
-$primary: #d4b996ff;
+// $primary: #d4b996ff;
+$primary: #b1a296;
 
 //***********************
 //***********************
@@ -88,12 +89,14 @@ $primary: #d4b996ff;
     }
 
     &:hover {
+
       &::before,
       &::after {
         top: 0;
       }
     }
   }
+
   &:disabled {
     background-color: black;
     color: $disabledColor;
@@ -103,6 +106,6 @@ $primary: #d4b996ff;
 }
 
 .active {
-  color: $primary !important;
+  color: $primary  !important;
   transform: scale(1.2);
 }

@@ -1,7 +1,9 @@
 @import '../UI/general.module.scss';
+
 .form-input {
   margin-bottom: 10px;
   width: 100%;
+
   @include mq('to', 767) {
     width: 100%;
     max-width: 100%;
@@ -17,20 +19,23 @@
     border-bottom: 2px solid $white;
     font-weight: 300;
     font-size: 17px;
+
     @include mq('to', 767) {
       font-size: 14px;
     }
+
     &::placeholder {
       color: $white;
       letter-spacing: 0.5px;
     }
+
     &:focus {
       outline: none;
     }
   }
 
   input:-webkit-autofill {
-    border-bottom: 2px solid $white !important;
+    border-bottom: 2px solid $white  !important;
     -webkit-text-fill-color: $white;
     transition: background-color 5000s ease-in-out 0s;
   }
@@ -40,16 +45,19 @@
     max-height: 200px;
     min-width: 100%;
     max-width: 100%;
+
     @include mq('to', 767) {
       width: 100%;
       max-width: 100%;
       min-height: 150px !important;
       max-height: 150px !important;
     }
+
     &::placeholder {
       letter-spacing: 0.5px;
       color: $white;
     }
+
     &::-webkit-scrollbar {
       width: 10px;
     }
@@ -63,30 +71,36 @@
       border-radius: 4px;
     }
   }
+
   &--error {
     input {
       border-bottom-color: $errorColor;
       background: none !important;
     }
+
     input:-webkit-autofill {
-      border-bottom: 2px solid $disabledColor !important;
+      border-bottom: 2px solid $errorColor  !important;
     }
   }
+
   &--valid {
     input {
       border-bottom-color: $notDisabledBtnColor;
       background: none !important;
     }
+
     input:-webkit-autofill {
-      border-bottom: 2px solid $notDisabledBtnColor !important;
+      border-bottom: 2px solid $notDisabledBtnColor  !important;
     }
   }
+
   &__textarea--error {
     textarea {
       border-bottom-color: $errorColor;
       background: none !important;
     }
   }
+
   &__textarea--valid {
     textarea {
       border-bottom-color: $notDisabledBtnColor;

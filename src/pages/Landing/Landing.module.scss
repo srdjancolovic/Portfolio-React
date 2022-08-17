@@ -80,10 +80,11 @@
       }
     }
 
-    h3 {
+    h2 {
       font-size: 32px;
       margin-bottom: 30px;
-      color: $white  !important;
+      color: $white;
+      font-weight: lighter;
 
       @include mq('to', 1400) {
         font-size: 37px;
@@ -94,7 +95,7 @@
       }
     }
 
-    h4 {
+    span {
       font-size: 25px;
 
       @include mq('to', 1400) {
