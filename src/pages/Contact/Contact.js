@@ -17,6 +17,10 @@ import { HashLink as Link } from 'react-router-hash-link';
 import useInput from '../../hooks/use-input';
 import Input from '../../components/Input/Input';
 
+import {motion} from 'framer-motion'
+import {fadeInUpAnim} from '../../components/UI/Animations'
+
+
 const Contact = () => {
   const form = useRef();
   const [showMsg, setShowmsg] = useState(false);
@@ -123,8 +127,8 @@ const Contact = () => {
       className={`${classes.contact} ${classes.container} `}
     >
       <div className={classes['contact__info-icons']}>
-        <h2>Let's get in touch</h2>
-        <div className={classes.contact__icons}>
+        <motion.h2 variants={fadeInUpAnim} initial='initial' whileInView='visible' viewport={fadeInUpAnim.viewport}>Let's get in touch</motion.h2>
+        <motion.div className={classes.contact__icons} variants={fadeInUpAnim} initial='initial' whileInView='visible' viewport={fadeInUpAnim.viewport}>
           <SocialIcon href="https://www.facebook.com/srdjancolovic95">
             <BsFacebook />
           </SocialIcon>
@@ -134,8 +138,8 @@ const Contact = () => {
           <SocialIcon href="https://www.linkedin.com/in/srdjan-colovic-1252971bb?original_referer=https%3A%2F%2Fsrdjancolovic.com%2F">
             <ImLinkedin2 />
           </SocialIcon>
-        </div>
-        <div className={classes.contact__info}>
+        </motion.div>
+        <motion.div className={classes.contact__info} variants={fadeInUpAnim} initial='initial' whileInView='visible' viewport={fadeInUpAnim.viewport}>
           <div
             className={`${classes['contact__info-tel']} ${classes['contact__info-item']}`}
           >
@@ -148,15 +152,16 @@ const Contact = () => {
             <HiOutlineMail className={classes['contact__info-item-icon']} />
             <p>colovicsrdjan@yahoo.com</p>
           </div>
-        </div>
-        <Link smooth to='/#landing'>
+        </motion.div>
+        <motion.div variants={fadeInUpAnim} initial='initial' whileInView='visible' viewport={fadeInUpAnim.viewport}><Link smooth to='/#landing'>
         <img
           src={logo}
           alt="Logo"
           className={`${classes.contact__logo} ${classes['contact__logo--top']}`}
-        /></Link>
+        /></Link></motion.div>
+        
       </div>
-      <div className={classes.contact__form}>
+      <motion.div className={classes.contact__form} variants={fadeInUpAnim} initial='initial' whileInView='visible' viewport={fadeInUpAnim.viewport}>
         <form ref={form} onSubmit={sendEmailHandler}>
           <Input
             className={` ${nameInputClasses} ${nameInputClassesSuccess}`}
@@ -219,7 +224,7 @@ const Contact = () => {
           alt="Logo"
           className={`${classes.contact__logo} ${classes['contact__logo--bottom']}`}
         /></Link>
-      </div>
+      </motion.div>
     </section>
   );
 };
