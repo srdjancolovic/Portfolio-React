@@ -27,6 +27,7 @@ const Projects = () => {
             img: window.location.origin + prof,
             // img: window.location.href.includes('localhost:3000') ?  : treba locak FaHourglassStart, pa onda iz konzole, u suprotnom je live ,
             name: 'Luka Ukropina | Portfolio Website',
+            code: '',
             link: 'https://www.lukaukropina.com/',
         },
         {
@@ -38,17 +39,31 @@ const Projects = () => {
         },
         {
             id: 'w3',
-            img: window.location.origin + tomanovic,
-            name: 'Motel Konak Mosko',
+            img: 'slika',
+            name: 'Salon keramike Azzurro',
             code: '',
-            link: 'https://motelkonakmosko.com/',
+            link: 'http://azzurrokeramika.me/',
         },
         {
             id: 'w4',
             img: window.location.origin + tomanovic,
+            name: 'Motel Konak Mosko',
+            code: 'https://github.com/srdjancolovic/Motel-Konak-Mosko',
+            link: 'https://motelkonakmosko.com/',
+        },
+        {
+            id: 'w5',
+            img: window.location.origin + tomanovic,
             name: 'Stomatoloska ordinacija Tomanovic',
-            code: '',
+            code: 'https://github.com/srdjancolovic/Stomatoloska-ordinacija-Tomanovic',
             link: 'https://drtomanovic.net/',
+        },
+        {
+            id: 'w6',
+            img: 'slika',
+            name: 'Salon keramike Azzurro',
+            code: '',
+            link: 'http://azzurrokeramika.me/',
         },
         {
             id: 'w5',
@@ -64,39 +79,42 @@ const Projects = () => {
             id: 'a1',
             img: 'slika',
             name: 'Food App',
+            code: 'https://github.com/srdjancolovic/Food-Order-App',
             link: 'https://reactfoodorderingapp.netlify.app/',
         },
         {
             id: 'a2',
             img: 'slika',
             name: 'Weather App',
+            code: 'https://github.com/srdjancolovic/Weather-App',
             link: 'https://weatherforecast7days.netlify.app/',
         },
         {
             id: 'a2',
             img: 'slika',
             name: 'Register Form',
+            code: 'https://github.com/srdjancolovic/User-Register-Form',
             link: 'https://userregisterform.netlify.app/',
         },
         {
             id: 'a3',
             img: 'slika',
             name: 'Budget App',
-            code: '',
+            code: 'https://github.com/srdjancolovic/Budget-App',
             link: 'https://trackbudgetapp.netlify.app/',
         },
         {
             id: 'a4',
             img: 'slika',
             name: 'Dice Game',
-            code: '',
+            code: 'https://github.com/srdjancolovic/Dice-game',
             link: 'https://gameofdices.netlify.app/',
         },
         {
             id: 'a4',
             img: 'slika',
             name: 'Guess the number',
-            code: '',
+            code: 'https://github.com/srdjancolovic/Guess-number',
             link: 'https://gameofguessingnumber.netlify.app/',
         },
     ];
@@ -153,6 +171,13 @@ const Projects = () => {
                 viewport={singleProjectAnim.viewport}
             >
                 <img src={website.img} alt={website.name} />
+                <a
+                    href={website.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <BsCodeSlash />
+                </a>
                 <a
                     href={website.link}
                     target="_blank"
