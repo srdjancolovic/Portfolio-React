@@ -17,6 +17,7 @@ import { DiBootstrap } from 'react-icons/di';
 
 import { FaSass } from 'react-icons/fa';
 import { SiGit } from 'react-icons/si';
+import { SiWebflow } from 'react-icons/si';
 import { DiNpm } from 'react-icons/di';
 import { SiFigma } from 'react-icons/si';
 import { SiAdobexd } from 'react-icons/si';
@@ -75,6 +76,11 @@ export default class AutoPlayMethods extends Component {
           <div className={classes.slider__icon}>
             <span style={{ color: '#00d8ff' }}>
               <SiReact />
+            </span>
+          </div>
+          <div className={classes.slider__icon}>
+            <span style={{ color: '#0769ad' }}>
+              <SiWebflow />
             </span>
           </div>
           <div className={classes.slider__icon}>

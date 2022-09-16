@@ -8,33 +8,48 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    //svg
-    // path {
-    //   stroke-width: 2px;
-    //   stroke: red;
-    //   transition: all 0.5s;
-    //   animation: animate 3s linear forwards;
+    &__logoSvg {
+        width: 60px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        width: 60px;
 
-    //   &:nth-child(1) {
-    //     stroke-dasharray: 545;
-    //     stroke-dashoffset: 545;
-    //   }
-    //   &:nth-child(2) {
-    //     stroke-dasharray: 449;
-    //     stroke-dashoffset: 449;
-    //   }
-    // }
-    // @keyframes animate {
-    //   80% {
-    //     stroke-dashoffset: 0;
-    //     fill: transparent;
-    //   }
+        @include mq('to', 767) {
+            width: 45px;
+        }
 
-    //   100% {
-    //     fill: red;
-    //     stroke-dashoffset: 0;
-    //   }
-    // }
+        path {
+            stroke-width: 2px;
+            stroke: $white;
+            transition: all 0.5s;
+            animation: animate 2s linear forwards;
+
+            &:nth-child(1) {
+                stroke-dasharray: 545;
+                stroke-dashoffset: 545;
+            }
+
+            &:nth-child(2) {
+                stroke-dasharray: 449;
+                stroke-dashoffset: 449;
+            }
+        }
+    }
+
+
+
+    @keyframes animate {
+        80% {
+            stroke-dashoffset: 0;
+            fill: transparent;
+        }
+
+        100% {
+            fill: $white;
+            stroke-dashoffset: 0;
+        }
+    }
 
     //Logo
     &__logo {
@@ -42,6 +57,7 @@
         top: 5%;
         left: 5%;
         width: 60px;
+
         @include mq('to', 576) {
             width: 45px;
         }

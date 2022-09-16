@@ -3,8 +3,18 @@ import { Switch, useLocation } from 'react-router-dom';
 import { BsCodeSlash } from 'react-icons/bs';
 import { MdOutlineLiveTv } from 'react-icons/md';
 import { useEffect } from 'react';
-import prof from '../../assets/id-img.webp';
+import srdjanColovic from '../../assets/SrdjanColovicPortfolio.webp';
+import lukaukropina from '../../assets/LukaUkropina.webp';
+import azzuro from '../../assets/Azzuro.webp';
+import budgetApp from '../../assets/BudgetApp.webp';
+import diceGame from '../../assets/DiceGame.webp';
+import foodApp from '../../assets/FoodApp.webp';
+import guessTheNum from '../../assets/GuessTheNum.webp';
+import motelKonak from '../../assets/MotelKonak.webp';
+import registerForm from '../../assets/RegisterForm.webp';
 import tomanovic from '../../assets/Tomanovic.webp';
+import weatherApp from '../../assets/WeatherApp.webp';
+import studioAcima from '../../assets/studioAcimaBg.webp';
 import { NavLink } from 'react-router-dom';
 import classes from './Projects.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,29 +34,28 @@ const Projects = () => {
     const websites = [
         {
             id: 'w1',
-            img: window.location.origin + prof,
-            // img: window.location.href.includes('localhost:3000') ?  : treba locak FaHourglassStart, pa onda iz konzole, u suprotnom je live ,
+            img: window.location.origin + lukaukropina,
             name: 'Luka Ukropina | Portfolio Website',
-            code: '',
+            code: 'https://github.com/srdjancolovic/Luka-Ukropina-Portfolio-Website',
             link: 'https://www.lukaukropina.com/',
         },
         {
             id: 'w2',
-            // img:  window.location.href.includes('localhost:3000') ? 'localhost:3000/projects/../../assets/id-img.webp'  : null,
-            img: window.location.origin + prof,
+            img: window.location.origin + srdjanColovic,
             name: 'Srdjan Colovic Portfolio v1',
-            link: 'https://srdjancolovic.com/',
+            code: 'https://github.com/srdjancolovic/Portfolio-Website-v1',
+            link: 'https://studioacimabetaversion.netlify.app/',
         },
         {
             id: 'w3',
-            img: 'slika',
-            name: 'Salon keramike Azzurro',
-            code: '',
-            link: 'http://azzurrokeramika.me/',
+            img: window.location.origin + studioAcima,
+            name: 'Studio Acima (beta)',
+            code: 'https://github.com/srdjancolovic/Studio-Acima-Portfolio',
+            link: 'https://studioacimabetaversion.netlify.app/',
         },
         {
             id: 'w4',
-            img: window.location.origin + tomanovic,
+            img: window.location.origin + motelKonak,
             name: 'Motel Konak Mosko',
             code: 'https://github.com/srdjancolovic/Motel-Konak-Mosko',
             link: 'https://motelkonakmosko.com/',
@@ -60,16 +69,9 @@ const Projects = () => {
         },
         {
             id: 'w6',
-            img: 'slika',
+            img: window.location.origin + azzuro,
             name: 'Salon keramike Azzurro',
-            code: '',
-            link: 'http://azzurrokeramika.me/',
-        },
-        {
-            id: 'w5',
-            img: 'slika',
-            name: 'Salon keramike Azzurro',
-            code: '',
+            code: 'https://github.com/srdjancolovic/Salon-Azzurro',
             link: 'http://azzurrokeramika.me/',
         },
     ];
@@ -77,49 +79,47 @@ const Projects = () => {
     const apps = [
         {
             id: 'a1',
-            img: 'slika',
+            img: window.location.origin + foodApp,
             name: 'Food App',
             code: 'https://github.com/srdjancolovic/Food-Order-App',
             link: 'https://reactfoodorderingapp.netlify.app/',
         },
         {
             id: 'a2',
-            img: 'slika',
+            img: window.location.origin + weatherApp,
             name: 'Weather App',
             code: 'https://github.com/srdjancolovic/Weather-App',
             link: 'https://weatherforecast7days.netlify.app/',
         },
         {
-            id: 'a2',
-            img: 'slika',
+            id: 'a3',
+            img: window.location.origin + registerForm,
             name: 'Register Form',
             code: 'https://github.com/srdjancolovic/User-Register-Form',
             link: 'https://userregisterform.netlify.app/',
         },
         {
-            id: 'a3',
-            img: 'slika',
+            id: 'a4',
+            img: window.location.origin + budgetApp,
             name: 'Budget App',
             code: 'https://github.com/srdjancolovic/Budget-App',
             link: 'https://trackbudgetapp.netlify.app/',
         },
         {
-            id: 'a4',
-            img: 'slika',
+            id: 'a5',
+            img: window.location.origin + diceGame,
             name: 'Dice Game',
             code: 'https://github.com/srdjancolovic/Dice-game',
             link: 'https://gameofdices.netlify.app/',
         },
         {
-            id: 'a4',
-            img: 'slika',
+            id: 'a6',
+            img: window.location.origin + guessTheNum,
             name: 'Guess the number',
             code: 'https://github.com/srdjancolovic/Guess-number',
             link: 'https://gameofguessingnumber.netlify.app/',
         },
     ];
-
-    console.log(websites[0].link);
 
     //Webistes and apps concated
     const all = websites.concat(apps);
@@ -171,13 +171,7 @@ const Projects = () => {
                 viewport={singleProjectAnim.viewport}
             >
                 <img src={website.img} alt={website.name} />
-                <a
-                    href={website.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <BsCodeSlash />
-                </a>
+
                 <a
                     href={website.link}
                     target="_blank"
@@ -261,9 +255,9 @@ const Projects = () => {
                 So far I have built several websites and mini applications.
                 Websites are mostly made for clients according to their needs
                 with original design created by me. All apps shown here are
-                created as practical projects. Live preview or code is available
-                for each website or app. As for portfolio website, it's
-                completely made in React JS.
+                created as practical projects. Live preview and source code is
+                available for each website or app. As for portfolio website,
+                it's completely made in React JS.
             </motion.p>
 
             <motion.div
