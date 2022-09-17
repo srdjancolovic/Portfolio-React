@@ -44,7 +44,7 @@ const Projects = () => {
             img: window.location.origin + srdjanColovic,
             name: 'Srdjan Colovic Portfolio v1',
             code: 'https://github.com/srdjancolovic/Portfolio-Website-v1',
-            link: 'https://studioacimabetaversion.netlify.app/',
+            link: 'https://srdjancolovicportfoliov1.netlify.app/',
         },
         {
             id: 'w3',

@@ -10,13 +10,15 @@
 
     &__logoSvg {
         width: 60px;
+        height: fit-content;
         position: absolute;
-        top: 0;
+        top: 12px;
         left: 5%;
         width: 60px;
 
         @include mq('to', 767) {
             width: 45px;
+            top: 4px;
         }
 
         path {
@@ -36,8 +38,6 @@
             }
         }
     }
-
-
 
     @keyframes animate {
         80% {
