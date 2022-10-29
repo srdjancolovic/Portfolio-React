@@ -10,7 +10,7 @@ import budgetApp from '../../assets/BudgetApp.webp';
 import diceGame from '../../assets/DiceGame.webp';
 import foodApp from '../../assets/FoodApp.webp';
 import guessTheNum from '../../assets/GuessTheNum.webp';
-import motelKonak from '../../assets/MotelKonak.webp';
+import motelKonak from '../../assets/motelKonak.webp';
 import registerForm from '../../assets/RegisterForm.webp';
 import tomanovic from '../../assets/Tomanovic.webp';
 import weatherApp from '../../assets/WeatherApp.webp';
@@ -57,7 +57,7 @@ const Projects = () => {
             id: 'w4',
             img: window.location.origin + motelKonak,
             name: 'Motel Konak Mosko',
-            code: 'https://github.com/srdjancolovic/Motel-Konak-Mosko',
+            code: 'https://github.com/srdjancolovic/Motel-Konak',
             link: 'https://motelkonakmosko.com/',
         },
         {
