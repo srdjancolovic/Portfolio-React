@@ -1,0 +1,47 @@
+.btn {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    a {
+        margin-left: 10px;
+        font-size: 13px;
+        align-self: stretch;
+    }
+
+    &:disabled {
+        pointer-events: none;
+
+    }
+
+    &__btnSquare {
+        border-radius: 4px;
+    }
+
+    &__btnSquareBig {
+        padding: 17px 34px 17px 31px;
+        line-height: 22px;
+        font-size: 18px;
+        font-weight: 700;
+        max-height: 56px;
+    }
+
+    &__blackColor {
+        color: black;
+    }
+
+    &__blueBg {
+        background-color: #5200FF;
+
+        &:disabled {
+            background: rgba(131, 138, 156, 0.32);
+        }
+
+        @media(hover:hover) {
+            &:hover {
+                background-color: #4504D3;
+            }
+        }
+    }
+}
