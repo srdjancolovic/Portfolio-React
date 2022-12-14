@@ -12,13 +12,12 @@
         width: 60px;
         height: fit-content;
         position: absolute;
-        top: 12px;
+        top: 45px;
         left: 5%;
         width: 60px;
 
         @include mq('to', 767) {
             width: 45px;
-            top: 4px;
         }
 
         path {
