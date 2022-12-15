@@ -1,0 +1,66 @@
+@import '../../components/UI/general.module.scss';
+.header {
+    // background-color: rebeccapurple;
+    position: fixed;
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 30px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 100;
+    transition: all 0.2s ease;
+
+    &--black {
+        background-color: $black;
+    }
+
+    &__logoSvg {
+        width: 60px;
+        height: fit-content;
+        // position: absolute;
+        left: 5%;
+        top: 45px;
+        width: 50px;
+        z-index: 1100;
+        transition: all 0.2s ease;
+
+        &--hide-logo {
+            opacity: 0;
+        }
+
+        @include mq('to', 767) {
+            width: 45px;
+            bottom: -45px;
+        }
+
+        path {
+            stroke-width: 2px;
+            stroke: $white;
+            transition: all 0.5s;
+            animation: animate 2s linear forwards;
+
+            &:nth-child(1) {
+                stroke-dasharray: 545;
+                stroke-dashoffset: 545;
+            }
+
+            &:nth-child(2) {
+                stroke-dasharray: 449;
+                stroke-dashoffset: 449;
+            }
+        }
+    }
+}
+@keyframes animate {
+    80% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    100% {
+        fill: $white;
+        stroke-dashoffset: 0;
+    }
+}

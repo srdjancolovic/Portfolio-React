@@ -8,35 +8,36 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    &__logoSvg {
-        width: 60px;
-        height: fit-content;
-        position: absolute;
-        top: 45px;
-        left: 5%;
-        width: 60px;
+    // &__logoSvg {
+    //     width: 60px;
+    //     height: fit-content;
+    //     position: fixed;
+    //     left: 5%;
+    //     top: 45px;
+    //     width: 60px;
 
-        @include mq('to', 767) {
-            width: 45px;
-        }
+    //     @include mq('to', 767) {
+    //         width: 45px;
+    //         bottom: -45px;
+    //     }
 
-        path {
-            stroke-width: 2px;
-            stroke: $white;
-            transition: all 0.5s;
-            animation: animate 2s linear forwards;
+    //     path {
+    //         stroke-width: 2px;
+    //         stroke: $white;
+    //         transition: all 0.5s;
+    //         animation: animate 2s linear forwards;
 
-            &:nth-child(1) {
-                stroke-dasharray: 545;
-                stroke-dashoffset: 545;
-            }
+    //         &:nth-child(1) {
+    //             stroke-dasharray: 545;
+    //             stroke-dashoffset: 545;
+    //         }
 
-            &:nth-child(2) {
-                stroke-dasharray: 449;
-                stroke-dashoffset: 449;
-            }
-        }
-    }
+    //         &:nth-child(2) {
+    //             stroke-dasharray: 449;
+    //             stroke-dashoffset: 449;
+    //         }
+    //     }
+    // }
 
     @keyframes animate {
         80% {

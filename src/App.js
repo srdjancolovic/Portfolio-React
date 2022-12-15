@@ -8,11 +8,11 @@ import About from './pages/About/About';
 import Landing from './pages/Landing/Landing';
 import Projects from './pages/Projects/Projects';
 import Copyright from './components/Copyright/Copyright';
-
+import Header from './components/UI/Header';
 function App() {
     return (
         <Fragment>
-            <Hamburger />
+            <Header />
             <Navigation />
             <Switch>
                 <Route path="/" exact>
