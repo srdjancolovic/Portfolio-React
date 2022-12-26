@@ -6,7 +6,6 @@ const Header = () => {
 
     window.onscroll = () => {
         const scrollFromTop = document.documentElement.scrollTop;
-        console.log(scrollFromTop);
 
         if (scrollFromTop > 10) {
             setHideLogo(true);
@@ -15,12 +14,15 @@ const Header = () => {
         }
     };
 
+    const projectsPage = window.location.href.includes('projects');
+    console.log(projectsPage);
+
     return (
         <div className={classes.header}>
             <svg
                 className={`${classes['header__logoSvg']} ${
                     hideLogo ? classes['header__logoSvg--hide-logo'] : ''
-                }`}
+                } ${projectsPage ? classes['header__logoSvg--hide-logo'] : ''}`}
                 width="122"
                 height="136"
                 viewBox="0 0 122 136"
