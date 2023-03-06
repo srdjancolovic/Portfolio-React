@@ -10,6 +10,7 @@ import budgetApp from '../../assets/BudgetApp.webp';
 import diceGame from '../../assets/DiceGame.webp';
 import foodApp from '../../assets/FoodApp.webp';
 import guessTheNum from '../../assets/GuessTheNum.webp';
+import gineaBg from '../../assets/GineaBg.webp';
 import motelKonak from '../../assets/motelKonak.webp';
 import registerForm from '../../assets/RegisterForm.webp';
 import tomanovic from '../../assets/Tomanovic.webp';
@@ -34,41 +35,48 @@ const Projects = () => {
     const websites = [
         {
             id: 'w1',
+            img: window.location.origin + gineaBg,
+            name: 'ZU GINEA',
+            code: 'https://github.com/srdjancolovic/GINEA',
+            link: 'https://zuginea.com/',
+        },
+        {
+            id: 'w2',
             img: window.location.origin + lukaukropina,
             name: 'Luka Ukropina | Portfolio Website',
             code: 'https://github.com/srdjancolovic/Luka-Ukropina-Portfolio-Website',
             link: 'https://www.lukaukropina.com/',
         },
         {
-            id: 'w2',
+            id: 'w3',
             img: window.location.origin + srdjanColovic,
             name: 'Srdjan Colovic Portfolio v1',
             code: 'https://github.com/srdjancolovic/Portfolio-Website-v1',
             link: 'https://srdjancolovicportfoliov1.netlify.app/',
         },
         {
-            id: 'w3',
+            id: 'w4',
             img: window.location.origin + studioAcima,
             name: 'Studio Acima (beta)',
             code: 'https://github.com/srdjancolovic/Studio-Acima-Portfolio',
             link: 'https://studioacimabetaversion.netlify.app/',
         },
         {
-            id: 'w4',
+            id: 'w5',
             img: window.location.origin + motelKonak,
             name: 'Motel Konak Mosko',
             code: 'https://github.com/srdjancolovic/Motel-Konak',
             link: 'https://motelkonakmosko.com/',
         },
         {
-            id: 'w5',
+            id: 'w6',
             img: window.location.origin + tomanovic,
             name: 'Stomatoloska ordinacija Tomanovic',
             code: 'https://github.com/srdjancolovic/Stomatoloska-ordinacija-Tomanovic',
             link: 'https://drtomanovic.net/',
         },
         {
-            id: 'w6',
+            id: 'w7',
             img: window.location.origin + azzuro,
             name: 'Salon keramike Azzurro',
             code: 'https://github.com/srdjancolovic/Salon-Azzurro',

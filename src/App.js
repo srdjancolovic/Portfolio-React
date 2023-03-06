@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Contact from './pages/Contact/Contact';
-import Hamburger from './components/Hamburger/Hamburger';
 import Navigation from './components/Navigation/Navigation';
 import About from './pages/About/About';
 import Landing from './pages/Landing/Landing';
