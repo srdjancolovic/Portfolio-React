@@ -15,7 +15,6 @@ const Header = () => {
     };
 
     const projectsPage = window.location.href.includes('projects');
-    console.log(projectsPage);
 
     return (
         <div className={classes.header}>

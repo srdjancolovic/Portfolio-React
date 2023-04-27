@@ -11,6 +11,7 @@ import diceGame from '../../assets/DiceGame.webp';
 import foodApp from '../../assets/FoodApp.webp';
 import guessTheNum from '../../assets/GuessTheNum.webp';
 import gineaBg from '../../assets/GineaBg.webp';
+import intravell from '../../assets/intravell.webp';
 import motelKonak from '../../assets/motelKonak.webp';
 import registerForm from '../../assets/RegisterForm.webp';
 import tomanovic from '../../assets/Tomanovic.webp';
@@ -34,11 +35,18 @@ const Projects = () => {
 
     const websites = [
         {
+            id: 'w8',
+            img: window.location.origin + intravell,
+            name: 'IN TRAVEL AGENCIJA - WordPress',
+            // code: 'https://github.com/srdjancolovic/GINEA',
+            link: 'https://intravel.ba/',
+        },
+        {
             id: 'w1',
             img: window.location.origin + gineaBg,
             name: 'ZU GINEA',
             code: 'https://github.com/srdjancolovic/GINEA',
-            link: 'https://zuginea.com/',
+            link: 'https://zuginea.netlify.app/',
         },
         {
             id: 'w2',
