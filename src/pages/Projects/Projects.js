@@ -17,6 +17,7 @@ import registerForm from '../../assets/RegisterForm.webp';
 import tomanovic from '../../assets/Tomanovic.webp';
 import weatherApp from '../../assets/WeatherApp.webp';
 import studioAcima from '../../assets/studioAcimaBg.webp';
+import crudApp from '../../assets/crud-img.webp';
 import { NavLink } from 'react-router-dom';
 import classes from './Projects.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -93,6 +94,13 @@ const Projects = () => {
     ];
 
     const apps = [
+        {
+            id: 'a7',
+            img: window.location.origin + crudApp,
+            name: 'CRUD App',
+            code: 'https://github.com/srdjancolovic/Crud-app',
+            link: 'https://crudapppractice.netlify.app/',
+        },
         {
             id: 'a1',
             img: window.location.origin + foodApp,
