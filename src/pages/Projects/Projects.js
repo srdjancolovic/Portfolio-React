@@ -39,7 +39,7 @@ const Projects = () => {
             id: 'w8',
             img: window.location.origin + intravell,
             name: 'IN TRAVEL AGENCIJA - WordPress',
-            // code: 'https://github.com/srdjancolovic/GINEA',
+            code: '',
             link: 'https://intravel.ba/',
         },
         {
@@ -75,7 +75,7 @@ const Projects = () => {
             img: window.location.origin + motelKonak,
             name: 'Motel Konak Mosko',
             code: 'https://github.com/srdjancolovic/Motel-Konak',
-            link: 'https://motelkonakmosko.com/',
+            link: 'https://motelkonakmosko.netlify.app/',
         },
         {
             id: 'w6',
@@ -282,6 +282,20 @@ const Projects = () => {
                 created as practical projects. Live preview and source code is
                 available for each website or app. As for portfolio website,
                 it's completely made in React JS.
+                <br />
+                <br />
+                In Projects section, almost all of my projects are shown. Some
+                projects are from a period when I started learning and when I
+                was freelancing, while some are newer where I used modern
+                technologies, better practices and wrote better code in general.
+                <br /> <br />
+                Older projects: Srdjan Colovic Portfolio v1, Stomatoloska
+                ordinacija Tomanovic, AZZURRO Herceg Novi, Weather App, Register
+                Form, Budget App, Dice game, Guess the number
+                <br />
+                Newer projects: IN TRAVEL Agencija (WordPress), GINEA, Luka
+                Ukropina Portfolio, Studio Acima, Motel Konak Mosko, CRUD App,
+                Food App
             </motion.p>
 
             <motion.div
