@@ -54,7 +54,7 @@ const Projects = () => {
             img: window.location.origin + lukaukropina,
             name: 'Luka Ukropina | Portfolio Website',
             code: 'https://github.com/srdjancolovic/Luka-Ukropina-Portfolio-Website',
-            link: 'https://www.lukaukropina.com/',
+            link: 'https://lukaukropinaportfolio.netlify.app/',
         },
         {
             id: 'w3',
@@ -75,7 +75,7 @@ const Projects = () => {
             img: window.location.origin + motelKonak,
             name: 'Motel Konak Mosko',
             code: 'https://github.com/srdjancolovic/Motel-Konak',
-            link: 'https://motelkonakmosko.netlify.app/',
+            link: 'https://motelkonak.com/',
         },
         {
             id: 'w6',
@@ -281,7 +281,9 @@ const Projects = () => {
                 with original design created by me. All apps shown here are
                 created as practical projects. Live preview and source code is
                 available for each website or app. As for portfolio website,
-                it's completely made in React JS.
+                it's completely made in React JS. <br />
+                Note: Some projects that were made for clients are hosted on
+                Netlify because their hosting expired.
                 <br />
                 <br />
                 In Projects section, almost all of my projects are shown. Some
